@@ -27,8 +27,8 @@
 	    
       <a-assets>
         <a-asset-item
-          id="asset0"
-          src="./asset0.glb"
+          id="swing"
+          src="./swing.glb"
         >
         </a-asset-item>
         
@@ -46,9 +46,9 @@
         </a-asset-item>
         
         <a-asset-item 
-        id="asset3" 
+        id="climbbar" 
         response-type="arraybuffer" 
-        src="./asset3.glb"
+        src="./climbbar.glb"
         >
         </a-asset-item>
 
@@ -63,9 +63,10 @@
     
     <a-entity id="entity" look-at="[camera]">
       <a-entity
-          gltf-model="#asset0" 
-          scale="0.005 0.005 0.005" 
+          gltf-model="#swing" 
+          scale="0.1 0.1 0.1" 
           position = "0.2 0 0.7" 
+          animation-mixer = "clip:Take 01"
 	  class="clickable"
           gesture-handler
         >
@@ -91,8 +92,8 @@
         </a-entity>
 
         <a-entity
-        gltf-model="#asset3" 
-          scale="0.007 0.007 0.007" 
+        gltf-model="#climbbar" 
+          scale="0.1 0.1 0.1" 
         position = "0.3 1 0.7" 
 	class="clickable"
           gesture-handler
