@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Welcome to the Zoo</title>
+    <title>Kids Playground</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
@@ -22,140 +22,82 @@
       gesture-detector
       id="scene"
     >
-      <audio id="song" src="./assets/zoo.mp3">
-	   class="clickable"</audio>
-       <audio id="song" src="./assets/zoo.mp3">
-        class="clickable"</audio>
+      <audio id="song" src="./assets/bgmusic.mp3"></audio>
+
 	    
       <a-assets>
         <a-asset-item
-          id="tiger"
-          src="./tiger.glb"
+          id="asset0"
+          src="./asset0.glb"
         >
         </a-asset-item>
         
         <a-asset-item
-          id="hippos"
-          src="./hippos.glb"
+          id="asset1"
+          src="./asset1.glb"
         >
         </a-asset-item>
         
         <a-asset-item 
-        id="elephant" 
+        id="asset2" 
         response-type="arraybuffer" 
-        src="./elephant.glb"
+        src="./asset2.glb"
         >
         </a-asset-item>
         
         <a-asset-item 
-        id="chicken" 
+        id="asset3" 
         response-type="arraybuffer" 
-        src="./chicken.glb"
+        src="./asset3.glb"
         >
         </a-asset-item>
 
-        <a-asset-item 
-        id="eagle" 
-        src="./eagle.glb"
-        >
-        </a-asset-item>
-
-        <a-asset-item 
-        id="trees" 
-        src="./trees.glb"
-        >
-        </a-asset-item>
-
-
-        <a-asset-item 
-        id="horse" 
-        src="./horse.glb"
-        >
-        </a-asset-item>
-
-
+        
 
       </a-assets>
       
       <a-marker
         type="pattern"
-        url="https://ronnelbillones.github.io/Trial/marker/pattern-zoo.patt"
+        url="https://tiklaaan.github.io/trial.github.io/marker/pattern-playground-logo.patt"
       >
     
     <a-entity id="entity" look-at="[camera]">
       <a-entity
-          gltf-model="#hippos" 
+          gltf-model="#asset0" 
           scale="0.005 0.005 0.005" 
           position = "0.2 0 0.7" 
-	animation-mixer = "clip:Take 001"
 	  class="clickable"
           gesture-handler
         >
         </a-entity>
 
 	<a-entity
-          gltf-model="#elephant" 
+          gltf-model="#asset1" 
           scale="0.007 0.007 0.007" 
           position = "0.7 0 0.7" 
-	  animation-mixer = "clip:CINEMA_4D_Principal"
+	  animation-mixer = "clip:Spinner|Rotate"
 	  class="clickable"
           gesture-handler
         >
         </a-entity>
 	
 	<a-entity
-          gltf-model="#chicken" 
+          gltf-model="#asset2"
           scale="0.5 0.5 0.5" 
           position = "-0.4 0 0.9" 
-	  animation-mixer = "clip:Idle"
 	class="clickable"
           gesture-handler
         >
         </a-entity>
 
         <a-entity
-        gltf-model="#eagle" 
+        gltf-model="#asset3" 
           scale="0.007 0.007 0.007" 
         position = "0.3 1 0.7" 
- 	 animation-mixer = "clip:CINEMA_4D_Principal"
 	class="clickable"
           gesture-handler
       >
       </a-entity>
-
-      <a-entity
-      gltf-model="#trees" 
-      scale="1 1 1" 
-      position="-0.2 0 0.8" 
-  animation-mixer = "clip:Take 001"
-class="clickable"
-        gesture-handler
-    >
-    </a-entity>
-
-
-
-  <a-entity
-  gltf-model="#horse" 
-  scale="0.2 0.2 0.2" 
-  position = "-0.4 0 0.7" 
-animation-mixer = "clip:idel_testnyi"
-class="clickable"
-    gesture-handler
->
-</a-entity>
-
-	    
-        <a-entity
-          id="tigers"
-          gltf-model="#tiger"
-          position="0.6 0 0.1" 
-          scale="0.025 0.025 0.025" 
-	animation-mixer = "clip:Take 001"
-          class="clickable"
-          gesture-handler
-        >
-        </a-entity>
 	<a-sound src=#song autoplay="true"> </a-sound>
 	</a-entity>
       </a-marker>
