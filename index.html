@@ -52,6 +52,13 @@
         >
         </a-asset-item>
 
+        <a-asset-item 
+        id="wheel" 
+        response-type="arraybuffer" 
+        src="./wheel.glb"
+        >
+        </a-asset-item>
+
         
 
       </a-assets>
@@ -99,6 +106,16 @@
           gesture-handler
       >
       </a-entity>
+
+      <a-entity
+      gltf-model="#wheel" 
+        scale="0.01 0.01 0.01" 
+      position = "0.3 0 0.7" 
+      animation-mixer = "clip:day24"
+class="clickable"
+        gesture-handler
+    >
+    </a-entity>
 	<a-sound src=#song autoplay="true"> </a-sound>
 	</a-entity>
       </a-marker>
